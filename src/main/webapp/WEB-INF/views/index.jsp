@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="container">
-		<form class="form-signin"
+		<form class="form-signin" method="post"
 			action="${pageContext.request.contextPath}/login/login.do">
 			<h2 class="form-signin-heading">登录首页</h2>
 			<label for="username">用户名</label> <input type="text" id="username"

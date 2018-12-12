@@ -1,12 +1,14 @@
 package cn.data.management.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.github.abel533.mapper.Mapper;
 
 import cn.data.management.entity.DataManage;
 import cn.data.management.mapper.DataManageMapper;
 
+@Service
 public class DataManageService extends BaseService<DataManage> {
 
 	@Autowired

@@ -21,6 +21,7 @@ public class DataManage {
 	private Date createTime;
 	private Date updateTime;
 	private Long viewCount;
+	private String dataDesc;
 	private String url;
 
 	public Long getId() {
@@ -100,6 +101,14 @@ public class DataManage {
 		return "DataManage [id=" + id + ", teamName=" + teamName + ", dataName=" + dataName + ", Ip=" + Ip
 				+ ", uploadBy=" + uploadBy + ", createTime=" + createTime + ", updateTime=" + updateTime
 				+ ", viewCount=" + viewCount + ", url=" + url + "]";
+	}
+
+	public String getDataDesc() {
+		return dataDesc;
+	}
+
+	public void setDataDesc(String dataDesc) {
+		this.dataDesc = dataDesc;
 	}
 
 }

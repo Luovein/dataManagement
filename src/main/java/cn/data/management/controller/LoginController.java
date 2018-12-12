@@ -116,8 +116,23 @@ public class LoginController {
 		return mapper.writeValueAsString(resultMap);
 	}
 
+	@RequestMapping(value = "getTeamNames.do")
+	@ResponseBody
+	public String getTeamNames() throws JsonProcessingException {
+		List<String> list = userService.queryDistintTeamNames();
+
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper.writeValueAsString(list);
+	}
+
 	@RequestMapping(value = "goManagerLogin.do")
 	public String goManagerLogin() {
 		return "managerLogin";
+	}
+
+	@RequestMapping(value = "goUploadView.do")
+	public String goUploadView() {
+
+		return "uploadView";
 	}
 }
