@@ -22,6 +22,7 @@ public class DataManage {
 	private Date updateTime;
 	private Long viewCount;
 	private String dataDesc;
+	private String fileName;
 	private String url;
 
 	public Long getId() {
@@ -88,6 +89,22 @@ public class DataManage {
 		this.viewCount = viewCount;
 	}
 
+	public String getDataDesc() {
+		return dataDesc;
+	}
+
+	public void setDataDesc(String dataDesc) {
+		this.dataDesc = dataDesc;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
 	public String getUrl() {
 		return url;
 	}
@@ -100,15 +117,8 @@ public class DataManage {
 	public String toString() {
 		return "DataManage [id=" + id + ", teamName=" + teamName + ", dataName=" + dataName + ", Ip=" + Ip
 				+ ", uploadBy=" + uploadBy + ", createTime=" + createTime + ", updateTime=" + updateTime
-				+ ", viewCount=" + viewCount + ", url=" + url + "]";
-	}
-
-	public String getDataDesc() {
-		return dataDesc;
-	}
-
-	public void setDataDesc(String dataDesc) {
-		this.dataDesc = dataDesc;
+				+ ", viewCount=" + viewCount + ", dataDesc=" + dataDesc + ", fileName=" + fileName + ", url=" + url
+				+ "]";
 	}
 
 }

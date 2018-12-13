@@ -29,7 +29,7 @@ $(function(){
 		}
 	});
 	$("#canBut").click(function(){
-		window.location.href="${pageContext.request.contextPath}/login/goUploadView.do";
+		window.location.href="${pageContext.request.contextPath}/login/goDataList.do";
 	});
 });
 </script>
@@ -37,8 +37,8 @@ $(function(){
 <body>
 	<div class="container">
 		<div style="position: absolute; left: 84%; top: 4%;">欢迎您，${loginUser.fullName }[${loginUser.userName }]<a href="${pageContext.request.contextPath}/login/logout.do">注销</a></div>
-		<h2 style="margin-top: 10%; color: blue;" align="center">上传资料</h2>
-		<form class="form-horizontal" id="myForm" action="${pageContext.request.contextPath}/login/createData.do" method="post" enctype="multipart/form-data">
+		<h2 style="margin-top: 10%; color: blue;" align="center">修改资料</h2>
+		<form class="form-horizontal" id="myForm" action="${pageContext.request.contextPath}/login/updateDataInfo.do" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="${dataManage.id }">
 			<div class="form-group row">
 				<label for="dataName" class="col-md-2 control-label">资料名称</label>
@@ -58,13 +58,13 @@ $(function(){
 			<div class="form-group row">
 				<label for="uploadBy" class="col-md-2 control-label">上传人</label>
 				<div class="col-md-8">
-					<input type="text" class="form-control" id="uploadBy" name="uploadBy" value="${loginUser.userName }" readonly="readonly">
+					<input type="text" class="form-control" id="uploadBy" name="uploadBy" value="${dataManage.uploadBy }" readonly="readonly">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="dataDesc" class="col-md-2 control-label">资料简介</label>
 				<div class="col-md-8">
-					<textarea class="form-control" id="dataDesc" name="dataDesc" value="${dataManage.dataDesc }"></textarea>
+					<textarea class="form-control" id="dataDesc" name="dataDesc">${dataManage.dataDesc }</textarea>
 				</div>
 			</div>
 			
@@ -77,7 +77,7 @@ $(function(){
 			
 			<div class="form-group row">
 			<div class="col-md-3"></div>
-			<button class="btn btn-primary btn-default col-md-2" id="createBut" type="submit">立即创建</button>
+			<button class="btn btn-primary btn-default col-md-2" id="createBut" type="submit">修改</button>
 			<div class="col-md-1"></div>
 			<button class="btn btn-primary btn-default col-md-2" id="canBut" type="button">取消</button>
 			</div>
